@@ -1,24 +1,27 @@
+//I wrote this code
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: 50,
+    height: 38,
     width: 270,
-    marginTop: 20,
+    marginTop: 15,
     marginLeft: 10,
     marginRight: 10,
-    borderRadius: 100,
-    borderColor: '#2cd18a',
+    borderRadius: 80,
+    borderColor: '#f76534',
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center'
-    // backgroundColor: '#2cd18a'
   },
   text: {
     fontSize: 14,
-    color: '#2cd18a'
+    color: '#f76534'
   }
 });
 
 export default styles;
+
+//end of code I wrote

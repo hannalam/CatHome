@@ -1,3 +1,5 @@
+//I wrote this code
+
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -20,9 +22,11 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   btnIcon: {
-    height: 14,
-    width: 14,
+    height: 15,
+    width: 15,
   },
 });
 
 export default styles;
+
+//end of code I wrote

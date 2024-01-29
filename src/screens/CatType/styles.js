@@ -1,7 +1,9 @@
+//I wrote this code
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  categoriesItemContainer: {
+  catTypeContainer: {
     flex: 1,
     margin: 10,
     justifyContent: 'center',
@@ -11,7 +13,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderRadius: 20,
   },
-  categoriesPhoto: {
+  catTypePhoto: {
     width: '100%',
     height: 155,
     borderRadius: 20,
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1.0,
     elevation: 3
   },
-  categoriesName: {
+  catTypeName: {
     flex: 1,
     fontSize: 20,
     fontWeight: 'bold',
@@ -34,10 +36,12 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginTop: 8
   },
-  categoriesInfo: {
+  catTypeInfo: {
     marginTop: 3,
     marginBottom: 5
   }
 });
 
 export default styles;
+
+//end of code I wrote

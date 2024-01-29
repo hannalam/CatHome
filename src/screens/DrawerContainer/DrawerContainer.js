@@ -1,16 +1,20 @@
+//I wrote this code
+
 import React from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
 import styles from "./styles";
 import MenuButton from "../../components/MenuButton/MenuButton";
 
+// The DrawerContainer component represents the side drawer menu in the application.
+// It provides navigation options to different screens.
 export default function DrawerContainer(props) {
   const { navigation } = props;
   return (
     <View style={styles.content}>
       <View style={styles.container}>
         <MenuButton
-          title="HOME"
+          title="ALL CATS"
           source={require("../../../assets/icons/home.png")}
           onPress={() => {
             navigation.navigate("Home");
@@ -18,10 +22,10 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="CATEGORIES"
-          source={require("../../../assets/icons/category.png")}
+          title="CAT TYPE"
+          source={require("../../../assets/icons/categories.png")}
           onPress={() => {
-            navigation.navigate("Categories");
+            navigation.navigate("CatType");
             navigation.closeDrawer();
           }}
         />
@@ -38,8 +42,11 @@ export default function DrawerContainer(props) {
   );
 }
 
+// PropTypes validation for the navigation prop
 DrawerContainer.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }),
 };
+
+//end of code I wrote

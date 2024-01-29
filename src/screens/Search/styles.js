@@ -1,11 +1,13 @@
+//I wrote this code
+
 import { StyleSheet } from "react-native";
-import { RecipeCard } from "../../AppStyles";
+import { CatCard } from "../../AppStyles";
 
 const styles = StyleSheet.create({
-  container: RecipeCard.container,
-  photo: RecipeCard.photo,
-  title: RecipeCard.title,
-  category: RecipeCard.category,
+  container: CatCard.container,
+  photo: CatCard.photo,
+  title: CatCard.title,
+  catType: CatCard.catType,
   btnIcon: {
     height: 14,
     width: 14,
@@ -32,3 +34,5 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
+
+//end of code I wrote

@@ -1,3 +1,5 @@
+//I wrote this code
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -24,3 +26,5 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
+
+//end of code I wrote

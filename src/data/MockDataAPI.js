@@ -1,131 +1,145 @@
-import { Text } from 'react-native';
-import React, { Component } from 'react';
-import { recipes, categories, ingredients } from './dataArrays';
+//I wrote this code
 
-export function getCategoryById(categoryId) {
+import { catInfo, catType, interests } from './dataArrays';
+
+// Get a cat type object by its ID.
+export function getCatTypeById(catTypeId) {
   let category;
-  categories.map(data => {
-    if (data.id == categoryId) {
+  catType.map(data => {
+    if (data.id == catTypeId) {
       category = data;
     }
   });
   return category;
 }
 
-export function getIngredientName(ingredientID) {
+// Get the name of an interest by its ID.
+export function getInterest(interestId) {
   let name;
-  ingredients.map(data => {
-    if (data.ingredientId == ingredientID) {
+  interests.map(data => {
+    if (data.interestId == interestId) {
       name = data.name;
     }
   });
   return name;
 }
 
-export function getIngredientUrl(ingredientID) {
+// Get the URL of an interest's photo by its ID.
+export function getInterestUrl(interestId) {
   let url;
-  ingredients.map(data => {
-    if (data.ingredientId == ingredientID) {
+  interests.map(data => {
+    if (data.interestId == interestId) {
       url = data.photo_url;
     }
   });
   return url;
 }
 
-export function getCategoryName(categoryId) {
+// Get the name of a cat type by its ID.
+export function getCatTypeName(catTypeId) {
   let name;
-  categories.map(data => {
-    if (data.id == categoryId) {
+  catType.map(data => {
+    if (data.id == catTypeId) {
       name = data.name;
     }
   });
   return name;
 }
 
-export function getRecipes(categoryId) {
-  const recipesArray = [];
-  recipes.map(data => {
-    if (data.categoryId == categoryId) {
-      recipesArray.push(data);
+// Get an array of cat profiles for a specific cat type.
+export function getCatInfo(catTypeId) {
+  const catInfoArray = [];
+  catInfo.map(data => {
+    if (data.catTypeId == catTypeId) {
+      catInfoArray.push(data);
     }
   });
-  return recipesArray;
+  return catInfoArray;
 }
 
-// modifica
-export function getRecipesByIngredient(ingredientId) {
-  const recipesArray = [];
-  recipes.map(data => {
-    data.ingredients.map(index => {
-      if (index[0] == ingredientId) {
-        recipesArray.push(data);
+//
+// Get cat profiles that have a specific interest.
+export function getCatInfoByInterest(interestId) {
+  const catInfoArray = [];
+  catInfo.map(data => {
+    data.interests.map(index => {
+      if (index[0] == interestId) {
+        catInfoArray.push(data);
       }
     });
   });
-  return recipesArray;
+  return catInfoArray;
 }
 
-export function getNumberOfRecipes(categoryId) {
+// Get the number of cat profiles for a specific cat type.
+export function getNumberOfCatInfo(catTypeId) {
   let count = 0;
-  recipes.map(data => {
-    if (data.categoryId == categoryId) {
+  catInfo.map(data => {
+    if (data.catTypeId == catTypeId) {
       count++;
     }
   });
   return count;
 }
 
-export function getAllIngredients(idArray) {
-  const ingredientsArray = [];
+// Get an array of interests and their corresponding values based on an ID array.
+export function getAllInterests(idArray) {
+  const interestsArray = [];
   idArray.map(index => {
-    ingredients.map(data => {
-      if (data.ingredientId == index[0]) {
-        ingredientsArray.push([data, index[1]]);
+    interests.map(data => {
+      if (data.interestId == index[0]) {
+        interestsArray.push([data, index[1]]);
       }
     });
   });
-  return ingredientsArray;
+  return interestsArray;
 }
 
-// functions for search
-export function getRecipesByIngredientName(ingredientName) {
-  const nameUpper = ingredientName.toUpperCase();
-  const recipesArray = [];
-  ingredients.map(data => {
+// functions for searchs
+
+// Search for cat profiles by interest name.
+export function getCatInfoByInterestName(interestName) {
+  const nameUpper = interestName.toUpperCase();
+  const catInfoArray = [];
+  interests.map(data => {
     if (data.name.toUpperCase().includes(nameUpper)) {
-      // data.name.yoUpperCase() == nameUpper
-      const recipes = getRecipesByIngredient(data.ingredientId);
-      const unique = [...new Set(recipes)];
+      const catInfo = getCatInfoByInterest(data.interestId);
+      const unique = [...new Set(catInfo)];
       unique.map(item => {
-        recipesArray.push(item);
+        catInfoArray.push(item);
       });
-    }
+    }z
   });
-  const uniqueArray = [...new Set(recipesArray)];
+  const uniqueArray = [...new Set(catInfoArray)];
   return uniqueArray;
 }
 
-export function getRecipesByCategoryName(categoryName) {
-  const nameUpper = categoryName.toUpperCase();
-  const recipesArray = [];
-  categories.map(data => {
+// Search for cat profiles by cat type name.
+export function getCatInfoByCatTypeName(profileName) {
+  const nameUpper = profileName.toUpperCase();
+  const catInfoArray = [];
+  catType.map(data => {
     if (data.name.toUpperCase().includes(nameUpper)) {
-      const recipes = getRecipes(data.id); // return a vector of recipes
-      recipes.map(item => {
-        recipesArray.push(item);
+      const catInfo = getCatInfo(data.id); // return a vector of catInfo
+      catInfo.map(item => {
+        catInfoArray.push(item);
       });
     }
   });
-  return recipesArray;
+  return catInfoArray;
 }
 
-export function getRecipesByRecipeName(recipeName) {
+// Search for cat profiles by cat profile name
+export function getCatInfoByCatInfoName(recipeName) {
   const nameUpper = recipeName.toUpperCase();
-  const recipesArray = [];
-  recipes.map(data => {
+  const catInfoArray = [];
+  catInfo.map(data => {
     if (data.title.toUpperCase().includes(nameUpper)) {
-      recipesArray.push(data);
+      catInfoArray.push(data);
     }
   });
-  return recipesArray;
+  return catInfoArray;
 }
+
+
+//end of code I wrote

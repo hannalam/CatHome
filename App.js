@@ -1,5 +1,6 @@
+//I wrote this code
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import AppContainer from './src/navigations/AppNavigation';
 
 export default function App() {
@@ -7,3 +8,5 @@ export default function App() {
      <AppContainer />
   );
 }
+
+//end of code I wrote

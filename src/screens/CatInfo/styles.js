@@ -1,3 +1,5 @@
+//I wrote this code
+
 import { StyleSheet, Dimensions } from 'react-native';
 
 const { width: viewportWidth } = Dimensions.get('window');
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
   image: {
     ...StyleSheet.absoluteFillObject,
     width: '100%',
-    height: 250
+    height: 260
   },
   imageContainer: {
     flex: 1,
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignSelf: 'center',
     paddingVertical: 8,
-    marginTop: 200
+    marginTop: 180
   },
   paginationDot: {
     width: 8,
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     marginHorizontal: 0
   },
-  infoRecipeContainer: {
+  infoCatContainer: {
     flex: 1,
     margin: 25,
     marginTop: 20,
@@ -60,24 +62,24 @@ const styles = StyleSheet.create({
     width: 20,
     marginRight: 0
   },
-  infoRecipe: {
+  catInfo: {
     fontSize: 14,
     fontWeight: 'bold',
-    marginLeft: 5,
+    margin: 6,
   },
-  category: {
+  catType: {
     fontSize: 14,
     fontWeight: 'bold',
     margin: 10,
-    color: '#2cd18a'
+    color: '#f76534'
   },
-  infoDescriptionRecipe: {
+  infoDescription: {
     textAlign: 'left',
     fontSize: 16,
     marginTop: 30,
     margin: 15
   },
-  infoRecipeName: {
+  infoName: {
     fontSize: 28,
     margin: 10,
     fontWeight: 'bold',
@@ -87,3 +89,5 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
+
+//end of code I wrote

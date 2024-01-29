@@ -1,17 +1,20 @@
+//I wrote this code
+
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
 import {NavigationContainer} from '@react-navigation/native'
 import {createDrawerNavigator} from '@react-navigation/drawer' 
 import HomeScreen from '../screens/Home/HomeScreen';
-import CategoriesScreen from '../screens/Categories/CategoriesScreen';
-import RecipeScreen from '../screens/Recipe/RecipeScreen';
-import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
+import CatTypeScreen from '../screens/CatType/CatTypeScreen';
+import CatInfoScreen from '../screens/CatInfo/CatInfoScreen';
+import CatGroupScreen from '../screens/CatGroup/CatGroup';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
-import IngredientScreen from '../screens/Ingredient/IngredientScreen';
+import CommonInterestScreen from '../screens/CommonInterest/CommonInterestScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
-import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
+import InterestsScreen from '../screens/Interests/InterestsScreen';
 
- const Stack = createStackNavigator();
+// Create a stack navigator for the main screens of the app.
+const Stack = createStackNavigator();
 
 function MainNavigator() {
   return(
@@ -25,20 +28,20 @@ function MainNavigator() {
           }
       }}
     >
+      {/* Define screens and their corresponding components */}
       <Stack.Screen name='Home' component={HomeScreen} />
-      <Stack.Screen name='Categories' component={CategoriesScreen}/>
-      <Stack.Screen name='Recipe' component={RecipeScreen}/>
-      <Stack.Screen name='RecipesList' component={RecipesListScreen} />
-      <Stack.Screen name='Ingredient' component={IngredientScreen} />
+      <Stack.Screen name='CatType' component={CatTypeScreen}/>
+      <Stack.Screen name='CatInfo' component={CatInfoScreen}/>
+      <Stack.Screen name='CatGroup' component={CatGroupScreen} />
+      <Stack.Screen name='CommonInterest' component={CommonInterestScreen} />
       <Stack.Screen name='Search' component={SearchScreen} />
-      <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen} />
+      <Stack.Screen name='Interests' component={InterestsScreen} />
     </Stack.Navigator>
   )
 } 
 
-
-
- const Drawer = createDrawerNavigator();
+// Create a drawer navigator for app navigation.
+const Drawer = createDrawerNavigator();
 
 function DrawerStack() {
   return(
@@ -56,7 +59,7 @@ function DrawerStack() {
   )
 } 
 
-
+// The top-level component responsible for app navigation.
  export default function AppContainer() {
   return(
     <NavigationContainer>
@@ -67,3 +70,5 @@ function DrawerStack() {
  
 
 console.disableYellowBox = true;
+
+//end of code I wrote

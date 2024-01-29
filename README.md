@@ -1,37 +1,30 @@
-# Recipes App in React Native
+# How to run the app
 
-<center><a href="https://instamobile.io/app-templates/food-app-template/"><img src="https://www.instamobile.io/wp-content/uploads/2019/07/Screen-Shot-2019-07-22-at-8.56.44-PM.png" /></a></center>
+yarn install
+expo start
 
-Download this beautiful free React Native starter kit, featuring a recipes app, to bootstrap your mobile app development. Learn React Native by working on a real project. Get familiar with various native components, navigation, redux and more.
+# Expo Demo
 
-## Getting Started
+<a href="https://snack.expo.dev/@hannalam/cat-home"></a>
 
-To run the app, simply run
+# Features
 
-```yarn install && expo start```
-
-And scan the QR code in the Expo client app.
-
-## Expo Demo
-
-<center><a href=""><img src="https://instamobile.io/wp-content/uploads/2019/07/Screen-Shot-2019-07-22-at-8.20.29-PM.png" /></a></center>
-
-## Features
-
-- Recipes List
-- Categories
-- Ingredients
-- Recipes Details Screen
-- Photo Gallery
-- Detailed Description
-- Ingredients button
-- Ingredients List
-- Recipes by Ingredient
+- Cats List
+- Cat type
+- Cat Info
+- Cat Interest List
+- Common Interest Photo Gallery
 - Search
 - Drawer Menu
 - Navigation Bar
-- Beautiful UI Design Kit
-- Compatible with Expo
-- Highly modularized codebase
 
-Coded with 💖💖💖 by <a href="https://instamobile.io/">Instamobile</a>, <a href="https://instaflutter.com/">Instaflutter</a>. and <a href="https://instakotlin.com/">Instakotlin</a>.
+# Reference of media used:
+
+<a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Smashicons - Flaticon</a> previous.png
+<a href="https://www.flaticon.com/free-icons/application" title="application icons">Application icons created by Dooder - Flaticon</a> categories.png
+<a href="https://www.flaticon.com/free-icons/clear" title="clear icons">Clear icons created by Radhe Icon - Flaticon</a> close.png
+<a href="https://www.flaticon.com/free-icons/home-button" title="home button icons">Home button icons created by Freepik - Flaticon</a> home.png
+<a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Royyan Wijaya - Flaticon</a> search.png
+<a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by Freepik - Flaticon</a> menu.png
+<a href="https://www.flaticon.com/free-icons/gender" title="gender icons">Gender icons created by Aranagraphics - Flaticon</a> gender.png
+<a href="https://www.flaticon.com/free-icons/birth" title="birth icons">Birth icons created by Us and Up - Flaticon</a> birthday.png
